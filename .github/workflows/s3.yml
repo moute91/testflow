@@ -22,5 +22,5 @@ jobs:
 
       - name: Create S3 bucket
         run: |
-           aws s3 mb s3://GHAtacs      
+           aws s3 mb s3://githubactiontacs      
 #          aws s3api create-bucket --bucket githubactiontacs --region us-east-1 --create-bucket-configuration LocationConstraint=us-east-1
