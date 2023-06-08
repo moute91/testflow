@@ -42,6 +42,7 @@ jobs:
 
 
   build-api:
+   needs: [package]
     runs-on: windows-latest
     steps:
       - run: echo "Building API"
@@ -58,8 +59,8 @@ jobs:
     runs-on: macos-latest
     steps: 
       - run: echo "Hello MacOS  "
-  image:
-    needs: [build-api, build-db, package]
+  build-image:
+    needs: [build-app]
     runs-on: debian-latest
     steps:
       - run: echo "another image jobs is running"
