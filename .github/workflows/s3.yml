@@ -3,7 +3,7 @@ name: githubs3bucket
 on:
 
 steps:
-      - uses: actions/checkout@main
+      - uses: actions/checkout
 - name: Upload to s3
         run: |
            aws s3 mb s3://githubaction_tacs
