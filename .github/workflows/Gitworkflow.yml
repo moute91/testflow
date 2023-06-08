@@ -1,12 +1,24 @@
-name: A Basic Workflow
+#name: A Basic Workflow
 
-on:
+#on:
 #Alows to trigger the workflow on push or pull request event but only for the "main" branch
-   push:
-     branches: [ " main" ]
+  # push:
+   #  branches: [ " main" ]
 #     branches-ignore: ['ignore']
-   pull_request:
-     branches: [ " main" ]
+  # pull_request:
+ #    branches: [ " main" ]
 
 #Allow you to run workflow manualy
-   
+# This is a simple workflow 
+
+name: 'GitHub Workflow Demo'
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  sayHello:
+    runs-on: 
+    steps: 
+    - name: runscript-to-say-hello
+      run:  echo "Howdy GitHub Actions"
