@@ -1,0 +1,12 @@
+name: A Basic Workflow
+
+on:
+#Alows to trigger the workflow on push or pull request event but only for the "main" branch
+   push:
+     branches: [ " main" ]
+#     branches-ignore: ['ignore']
+   pull_request:
+     branches: [ " main" ]
+
+#Allow you to run workflow manualy
+   
