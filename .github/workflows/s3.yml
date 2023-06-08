@@ -20,7 +20,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1  # Replace with your desired AWS region
 
-      - name: Create S3 bucket
+      - name: Delete S3 bucket
         run: |
            aws s3 rm s3://githubactiontacs      
 #          aws s3api create-bucket --bucket githubactiontacs --region us-east-1 --create-bucket-configuration LocationConstraint=us-east-1
